@@ -1,0 +1,16 @@
+name: test_generateHistogram
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Build code
+        run: g++ -o program main.cpp
+      - name: Run unit test
+        run: ./program data.txt pT 10 0 100 && diff -q pT.txt expected_pT.txt
+        working-directory: ${{ github.workspace }}
