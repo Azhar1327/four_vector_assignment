@@ -5,8 +5,6 @@ This C++ code reads a data file containing four-vector information (momentum vec
 Installation
 To use this code, you will need to have a C++ compiler installed on your system. The code also depends on the Catch2 unit testing library, which is included as a submodule in the repository. To install Catch2, you can run the following commands:
 
-csharp
-Copy code
 git submodule init
 git submodule update
 This will download the Catch2 library into the tests/lib directory.
@@ -14,9 +12,8 @@ This will download the Catch2 library into the tests/lib directory.
 Usage
 The main program can be run from the command line with the following arguments:
 
-php
-Copy code
 computeHistogram <datafile> <distribution> <num_bins> <min_value> <max_value>
+
 where:
 
 <datafile> is the path to the input data file.
@@ -24,18 +21,16 @@ where:
 <num_bins> is the number of bins to use in the histogram.
 <min_value> is the minimum value of the x-axis for the histogram.
 <max_value> is the maximum value of the x-axis for the histogram.
+
 For example:
 
-kotlin
-Copy code
 computeHistogram data.txt mass 100 0 1000
 This will compute a histogram of the masses of particles in the input data file, with 100 bins ranging from 0 to 1000 MeV.
 
 Testing
 The code includes a suite of unit tests that can be run with the following command:
 
-go
-Copy code
 make test
+
 This will compile the code and run the tests using the Catch2 library. If all tests pass, you should see a message indicating that all tests have passed. If any tests fail, you will see an error message indicating which tests failed and why.
 
