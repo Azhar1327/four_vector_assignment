@@ -17,17 +17,23 @@ computeHistogram <datafile> <distribution> <num_bins> <min_value> <max_value>
 where:
 
 <datafile> is the path to the input data file.
+ 
 <distribution> is the name of the distribution to compute. Currently supported distributions include: pT, pX, pY, pZ, energy, and mass.
+ 
 <num_bins> is the number of bins to use in the histogram.
+ 
 <min_value> is the minimum value of the x-axis for the histogram.
+ 
 <max_value> is the maximum value of the x-axis for the histogram.
 
 For example:
 
 computeHistogram data.txt mass 100 0 1000
+ 
 This will compute a histogram of the masses of particles in the input data file, with 100 bins ranging from 0 to 1000 MeV.
 
 Testing
+
 The code includes a suite of unit tests that can be run with the following command:
 
 make test
