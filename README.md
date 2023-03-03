@@ -14,7 +14,7 @@ This will download the Catch2 library into the tests/lib directory.
 Usage
 The main program can be run from the command line with the following arguments:
 ```
-computeHistogram <datafile> <distribution> <num_bins> <min_value> <max_value>
+.\main <datafile> <distribution> <num_bins> <min_value> <max_value>
 ```
 
 where:
@@ -31,7 +31,7 @@ where:
 
 For example:
 ```
-computeHistogram data.txt mass 100 0 1000
+.\main data.txt mass 100 0 1000
 ```
 
 This will compute a histogram of the masses of particles in the input data file, with 100 bins ranging from 0 to 1000 MeV.
